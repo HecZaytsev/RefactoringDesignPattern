@@ -3,12 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
  */
 
-package com.hector.refactoringdesignpatterns;
 
 import java.util.Scanner;
-import designpatterns.*;
+import Visitor.*;
 
-import java.util;
+import java.util.*;
 
 /**
  *
@@ -43,6 +42,9 @@ public class RefactoringDesignPatterns {
         
         char opc = ' ';
 
+        DesignPatternVisitor visitor;
+        DesignPatternComposite composite;
+
         while (opc != 'X'){
 
             opc = menu();
@@ -53,13 +55,17 @@ public class RefactoringDesignPatterns {
                     System.out.println("É um padrão de projeto comportamental que permite que você");
                     System.out.println("separe algoritmos dos objetos de suas classes nos quais eles operam.");
 
-                    DesignPatternVisitor pattern = new DesignPatternVisitor() ;
-                    pattern.exemplo();
+                    visitor = new DesignPatternVisitor() ;
+                    visitor.exemplo();
 
                     break;
                 case '2': //Composite
                     System.out.println("É um padrão de projeto estrutural que permite que você alinhe objetos em estruturas de");
                     System.out.println("árvores e então trabalhe com essas estruturas como se elas fossem objetos individuais.");
+
+                    composite = new DesignPatternComposite() ;
+                    composite.exemplo();
+
                     break;
                 case '3': //Adapter
                     System.out.println("É um padrão de projeto estrutural que possibilita que objetos com interfaces");
