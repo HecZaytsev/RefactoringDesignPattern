@@ -6,6 +6,9 @@
 package com.hector.refactoringdesignpatterns;
 
 import java.util.Scanner;
+import designpatterns.*;
+
+import java.util;
 
 /**
  *
@@ -49,6 +52,10 @@ public class RefactoringDesignPatterns {
                 case '1': //Visitor
                     System.out.println("É um padrão de projeto comportamental que permite que você");
                     System.out.println("separe algoritmos dos objetos de suas classes nos quais eles operam.");
+
+                    DesignPatternVisitor pattern = new DesignPatternVisitor() ;
+                    pattern.exemplo();
+
                     break;
                 case '2': //Composite
                     System.out.println("É um padrão de projeto estrutural que permite que você alinhe objetos em estruturas de");
