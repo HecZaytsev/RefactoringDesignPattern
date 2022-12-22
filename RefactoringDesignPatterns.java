@@ -5,6 +5,8 @@
 
 
 import java.util.Scanner;
+
+import Prototype.DesignPatternPrototype;
 import Visitor.*;
 
 import java.util.*;
@@ -44,6 +46,7 @@ public class RefactoringDesignPatterns {
 
         DesignPatternVisitor visitor;
         DesignPatternComposite composite;
+        DesignPatternPrototype prototype;
 
         while (opc != 'X'){
 
@@ -70,6 +73,10 @@ public class RefactoringDesignPatterns {
                 case '3': //Adapter
                     System.out.println("É um padrão de projeto estrutural que possibilita que objetos com interfaces");
                     System.out.println("incompatíveis colaborarem entre si.");
+
+                    prototype = new DesignPatternPrototype();
+                    prototype.exemplo();
+
                     break;
                 case '4': //Prototype
                     System.out.println("É um padrão de projeto de criação que permite copiar objetos existentes sem");
