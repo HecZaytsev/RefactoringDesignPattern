@@ -14,7 +14,7 @@ abstract class Vehicle {
 		this.workShop2 = workShop2;
 	}
 
-	abstract public void manufacture();
+	abstract public void manufaturar();
 }
 
 // Refine abstraction 1 in bridge pattern
@@ -25,9 +25,9 @@ class Car extends Vehicle {
 	}
 
 	@Override
-	public void manufacture()
+	public void manufaturar()
 	{
-		System.out.print("Car ");
+		System.out.print("Manufatura carro ");
 		workShop1.work();
 		workShop2.work();
 	}
@@ -41,9 +41,9 @@ class Bike extends Vehicle {
 	}
 
 	@Override
-	public void manufacture()
+	public void manufaturar()
 	{
-		System.out.print("Bike ");
+		System.out.print("Manufatura Bicicleta ");
 		workShop1.work();
 		workShop2.work();
 	}
@@ -56,21 +56,21 @@ interface Workshop
 }
 
 // Concrete implementation 1 for bridge pattern
-class Produce implements Workshop {
+class Produzir implements Workshop {
 	@Override
 	public void work()
 	{
-		System.out.print("Produced");
+		System.out.print("Item produzido");
 	}
 }
 
 // Concrete implementation 2 for bridge pattern
-class Assemble implements Workshop {
+class Montar implements Workshop {
 	@Override
 	public void work()
 	{
-		System.out.print(" And");
-		System.out.println(" Assembled.");
+		System.out.print(" E");
+		System.out.println(" Montado.");
 	}
 }
 
@@ -83,9 +83,9 @@ public class DesignPatternBridge {
 
 	public void exemplo()
 	{
-		Vehicle vehicle1 = new Car(new Produce(), new Assemble());
-		vehicle1.manufacture();
-		Vehicle vehicle2 = new Bike(new Produce(), new Assemble());
-		vehicle2.manufacture();
+		Vehicle vehicle1 = new Car(new Produzir(), new Montar());
+		vehicle1.manufaturar();
+		Vehicle vehicle2 = new Bike(new Produzir(), new Montar());
+		vehicle2.manufaturar();
 	}
 }

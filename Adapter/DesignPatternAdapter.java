@@ -8,6 +8,9 @@ public class DesignPatternAdapter {
     }
     
     public void exemplo() {
+
+        // Utiliza adapter para fingir que cada objeto possa utilizar o .getSpeed
+
     	Movable bugattiVeyron = new BugattiVeyron();
     	MovableAdapter bugattiVeyronAdapter = new MovableAdapterImpl(bugattiVeyron);
         System.out.println("Bugatti Veyron Super Sport's top speed is " + bugattiVeyronAdapter.getSpeed() + " Kmph.");

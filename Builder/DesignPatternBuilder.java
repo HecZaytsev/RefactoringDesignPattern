@@ -7,9 +7,12 @@ public class DesignPatternBuilder {
     }
 
     public void exemplo() {
+
+      // No momento de construir objeto, utiliza de todos metódos Sets chamado pelas funções
+
         BankAccount newAccount = new BankAccount
-          .BankAccountBuilder("Jon", "22738022275")
-          .withEmail("jon@example.com")
+          .BankAccountBuilder("Hector", "22738022275")
+          .withEmail("hectoram2000@hotmail.com.com")
           .wantNewsletter(true)
           .build();
 

@@ -1,5 +1,6 @@
 package AbstractFactory;
-
+// As fábricas concretas produzem uma família de produtos que
+// pertencem a uma única variante.
 public class ColorFactory implements AbstractFactory<Color> {
 
     @Override

@@ -8,24 +8,23 @@ public class DesignPatternComposite {
 
     public void exemplo() {
 
-        projeto projetoLan = new projeto(new ArrayList<item>());
-        projetoLan.addItem(new produto("RAM 256", 100));
-        projetoLan.addItem(new produto("RAM 512", 150));
-        projetoLan.addItem(new produto("PLACA DE VIDEO A4500", 2000));
+        projeto projetoComputador = new projeto(new ArrayList<item>());
+        projetoComputador.addItem(new produto("RAM 16 GB", 150));
+        projetoComputador.addItem(new produto("PLACA DE VIDEO RTX 2060", 2000));
 
-        projeto subProjetoServidorLan = new projeto(new ArrayList<item>());
-        subProjetoServidorLan.addItem(new produto("RAM 1024", 250));
-        subProjetoServidorLan.addItem(new produto("RAM 1024", 250));
-        subProjetoServidorLan.addItem(new produto("PLACA DE VIDEO B8900", 4000));
-        projetoLan.addItem(subProjetoServidorLan);
+        projeto subProjetoPerifericos = new projeto(new ArrayList<item>());
+        subProjetoPerifericos.addItem(new produto("Mouse", 34));
+        subProjetoPerifericos.addItem(new produto("Teclado", 100));
+        subProjetoPerifericos.addItem(new produto("Auto-falante", 300));
+        projetoComputador.addItem(subProjetoPerifericos);
 
-        projeto subProjetoCabeamentoLan = new projeto(new ArrayList<item>());
-        subProjetoCabeamentoLan.addItem(new produto("CABO CAT 5E 500M", 1400));
-        subProjetoCabeamentoLan.addItem(new produto("CONECTORES RJ45 x 100", 1500));
+        projeto subProjetoDisplay = new projeto(new ArrayList<item>());
+        subProjetoDisplay.addItem(new produto("CABO HDMI", 40));
+        subProjetoDisplay.addItem(new produto("Monitor", 1500));
 
-        projetoLan.addItem(subProjetoCabeamentoLan);
+        projetoComputador.addItem(subProjetoDisplay);
 
-        System.out.println("PRECO TOTAL DO PROJETO = " + projetoLan.calcularPrecoFinal());
+        System.out.println("PRECO TOTAL DO PROJETO = " + projetoComputador.calcularPrecoFinal());
     }
 
 
