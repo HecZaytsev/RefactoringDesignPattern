@@ -6,7 +6,9 @@
 
 import java.util.Scanner;
 
+import AbstractFactory.DesignPatternAbstractFactory;
 import Prototype.DesignPatternPrototype;
+import Proxy.DesignPatternProxy;
 import State.DesignPatternState;
 import Visitor.*;
 import Bridge.*;
@@ -58,7 +60,8 @@ public class RefactoringDesignPatterns {
         DesignPatternInterpreter interpreter;
         DesignPatternState state;
         DesignPatternBuilder builder;
-
+        DesignPatternAbstractFactory abstractfactory;
+        DesignPatternProxy proxy;
         DesignPatternChain chain;
 
         while (opc != 'X'){
@@ -120,7 +123,7 @@ public class RefactoringDesignPatterns {
                     System.out.println("É um padrão de projeto criacional que permite a você construir objetos complexos passo a passo.");
                     System.out.println("O padrão possibilita que você produza diferentes tipos e representações de um objeto usando o mesmo código de construção.");
                     
-                    builder = new DesignPatternBuilder()
+                    builder = new DesignPatternBuilder();
                     builder.exemplo();
                     
                     
@@ -138,14 +141,16 @@ public class RefactoringDesignPatterns {
                     System.out.println("É um padrão de projeto criacional que permite que você produza");
                     System.out.println("famílias de objetos relacionados sem ter que especificar suas classes concretas.");
                     
-                    
+                    abstractfactory = new DesignPatternAbstractFactory();
+                    abstractfactory.exemplo();
                     
                     break;
                 case 'A': //Proxy
                     System.out.println("É um padrão de projeto estrutural que permite que você forneça um substituto ou um espaço reservado para outro objeto. ");
                     System.out.println("Um proxy controla o acesso ao objeto original, permitindo que você faça algo ou antes ou depois do pedido chegar ao objeto original.");
                     
-                    
+                    proxy = new DesignPatternProxy();
+                    proxy.exemplo();
                     
                     
                     break;

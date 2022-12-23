@@ -14,6 +14,7 @@ public class DesignPatternChain {
     public void process(Number request) {
 
         chain.process(request);
+        System.out.println("Processando");
     }
 }
 
@@ -22,6 +23,7 @@ abstract class Processor {
     public Processor(Processor nextProcessor){
 
         this.nextProcessor = nextProcessor;
+        System.out.println("Novo processador");
     }
 
     public void process(Number request){
