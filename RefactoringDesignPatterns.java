@@ -7,7 +7,13 @@
 import java.util.Scanner;
 
 import Prototype.DesignPatternPrototype;
+import State.DesignPatternState;
 import Visitor.*;
+import Bridge.*;
+import Builder.DesignPatternBuilder;
+import Adapter.*;
+import ChainOfRespostability.DesignPatternChain;
+import Interpreter.DesignPatternInterpreter;
 
 import java.util.*;
 
@@ -46,7 +52,14 @@ public class RefactoringDesignPatterns {
 
         DesignPatternVisitor visitor;
         DesignPatternComposite composite;
+        DesignPatternAdapter adapter;
         DesignPatternPrototype prototype;
+        DesignPatternBridge bridge;
+        DesignPatternInterpreter interpreter;
+        DesignPatternState state;
+        DesignPatternBuilder builder;
+
+        DesignPatternChain chain;
 
         while (opc != 'X'){
 
@@ -74,41 +87,76 @@ public class RefactoringDesignPatterns {
                     System.out.println("É um padrão de projeto estrutural que possibilita que objetos com interfaces");
                     System.out.println("incompatíveis colaborarem entre si.");
 
-                    prototype = new DesignPatternPrototype();
-                    prototype.exemplo();
+                    adapter = new DesignPatternAdapter();
+                    adapter.exemplo();
 
                     break;
                 case '4': //Prototype
                     System.out.println("É um padrão de projeto de criação que permite copiar objetos existentes sem");
                     System.out.println("fazer seu código ficar dependente de suas classes.");
+
+                    prototype = new DesignPatternPrototype();
+                    prototype.exemplo();
+
                     break;
                 case '5': //Bridge
                     System.out.println("É um padrão de projeto estrutural que possibilita que você divida uma classe grande ou um conjunto de classes ");
                     System.out.println("profundamente ligadas em duas hierarquias separadas, abstração e implementação, que podem ser desenvolvidas independentemente umas das outras.");
+                    
+                    bridge = new DesignPatternBridge();
+                    bridge.exemplo();
+                    
                     break;
+
                 case '6': //Interpreter
                     System.out.println("É um dos padrões de design comportamental. O padrão interpretador é usado para definir uma representação");
                     System.out.println("gramatical para uma linguagem e fornecer um intérprete para lidar com essa gramática.");
+                    
+                    interpreter = new DesignPatternInterpreter();
+                    interpreter.exemplo();
+                    
                     break;
                 case '7': //Builder
                     System.out.println("É um padrão de projeto criacional que permite a você construir objetos complexos passo a passo.");
                     System.out.println("O padrão possibilita que você produza diferentes tipos e representações de um objeto usando o mesmo código de construção.");
+                    
+                    builder = new DesignPatternBuilder()
+                    builder.exemplo();
+                    
+                    
                     break;
                 case '8': //State
                     System.out.println("É um padrão de projeto comportamental que permite que um objeto altere seu comportamento quando seu ");
                     System.out.println("estado interno muda. Assim parecendo como se o objeto mudasse de classe.");
+                    
+                    state = new DesignPatternState();
+                    state.exemplo();
+                    
+                    
                     break;
                 case '9': //Abstract Factory
                     System.out.println("É um padrão de projeto criacional que permite que você produza");
                     System.out.println("famílias de objetos relacionados sem ter que especificar suas classes concretas.");
+                    
+                    
+                    
                     break;
                 case 'A': //Proxy
                     System.out.println("É um padrão de projeto estrutural que permite que você forneça um substituto ou um espaço reservado para outro objeto. ");
                     System.out.println("Um proxy controla o acesso ao objeto original, permitindo que você faça algo ou antes ou depois do pedido chegar ao objeto original.");
+                    
+                    
+                    
+                    
                     break;
                 case 'B': //Chain of Responsability
                     System.out.println("É um padrão de projeto comportamental que permite que você passe pedidos por uma corrente de handlers.");
                     System.out.println("Ao receber um pedido, cada handler decide se processa o pedido ou o passa adiante para o próximo.");
+                    
+                    chain = new DesignPatternChain();
+                
+                    
+                    
                     break;
             }
 
