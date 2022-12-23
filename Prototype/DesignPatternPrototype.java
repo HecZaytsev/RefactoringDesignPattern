@@ -16,7 +16,7 @@ public class DesignPatternPrototype {
         circle.x = 10;
         circle.y = 20;
         circle.radius = 15;
-        circle.color = "vermelho";
+        circle.color = "azul";
         shapes.add(circle);
 
         Circle anotherCircle = (Circle) circle.clone();

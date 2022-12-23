@@ -13,8 +13,8 @@ public class DesignPatternChain {
     }
     public void process(Number request) {
 
-        chain.process(request);
-        System.out.println("Processando");
+        chain.process(request); // Executa neste handler
+        System.out.println("Processando"); 
     }
 }
 
@@ -22,7 +22,7 @@ abstract class Processor {
     private Processor nextProcessor;
     public Processor(Processor nextProcessor){
 
-        this.nextProcessor = nextProcessor;
+        this.nextProcessor = nextProcessor; // Passa para proximo handler
         System.out.println("Novo processador");
     }
 

@@ -8,7 +8,8 @@ public class DesignPatternInterpreter {
 
     }
 
-    public void exemplo() {
+    public void exemplo() { 
+        System.out.println("Realiza tradução de numeros romanos");
         ArrayList<NumeroRomanoInterpreter> interpretadores = new ArrayList<NumeroRomanoInterpreter>();
         interpretadores.add(new QuatroDigitosRomano());
         interpretadores.add(new TresDigitosRomano());
