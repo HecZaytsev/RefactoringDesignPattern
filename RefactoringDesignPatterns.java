@@ -1,7 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
- */
+// Hector Mattevi
+
+// Este codigo é um compilado de Design Patterns
+// Exemplos utilizados baseados em codigos de colegas do IFRS e blogs online
 
 
 import java.util.Scanner;
@@ -17,7 +17,6 @@ import Adapter.*;
 import ChainOfRespostability.DesignPatternChain;
 import Interpreter.DesignPatternInterpreter;
 
-import java.util.*;
 
 /**
  *
